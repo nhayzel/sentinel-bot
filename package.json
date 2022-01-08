@@ -1,0 +1,14 @@
+{
+  "name": "sentinel",
+  "version": "0.1.0",
+  "description": "Sentinel is a Discord bot created for the Third Legion discord server. It allows for small bits of moderation, welcome messages, and role selection within the server.",
+  "main": "gate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hayze (Sheath Interactive)",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.5.1"
+  }
+}
