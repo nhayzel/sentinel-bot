@@ -1,10 +1,11 @@
 //These constants declare that we need access to the Discord node_modules, and starts to create a new Bot.
 const { doesNotThrow } = require('assert');
 const Discord = require('discord.js');
+require('dotenv').config();
 const client = new Discord.Client({intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES"]});
 
 // This prefix constant controls the start-character for all commands of the bot.
-const prefix = '%';
+const prefix = process.env.PREFIX;
 
 const fs = require('fs');
 
@@ -57,6 +58,6 @@ client.on('messageCreate', message =>
 });
 
 
-client.login('OTI5MTcwMTc2NDA1MDIwNzMy.YdjbKQ.fINuNNUfTvoU3VzgWPTIpUouSOo').then(() => {
+client.login(process.env.DISCORD_TOKEN).then(() => {
     client.user.setPresence({ activities: [{ name: 'to "The Art of War" by Sun Tzu', type: 'LISTENING' }], status: 'online' });
 });
